@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+	<h1><u>Notifications</u></h1>
+	<form action="1traitement.php" method="post">
+	
+		<div>
+			<p><input type="checkbox" name="parametre" value="Activer_la_fontion_d_alerte">Activer la fontion d'alerte (Si la fonction d'alerte est activée, vous serez averti lorsqu'un article de votre choix devient disponible)</p>
+		</div>
+		
+		<div>
+			<tr>
+				<td><u>Critères de recherche:</u></td>
+			</tr>
+		</div>
+		
+		<tr>
+			<td><input type="checkbox" name="classe" value="Meubles_et_Objets_d_art">Meubles et Objets d'art<br>
+				<input type="checkbox" name="classe" value="Accessoires_VIP">Accessoires VIP<br>
+				<input type="checkbox" name="classe" value="Matériel_Scolaire">Matériel Scolaire<br>
+				<input type="checkbox" name="statut" value="Rabais">Rabais<br>
+				<input type="checkbox" name="statut" value="Article_Récent">Article Récent<br>
+			</td>
+		</tr>
+			<td colspan="3" align="center">
+				<input type="submit" name="button1" value="Actualiser"/>
+			</td>
+		</tr>
+	</form>
+</body>
+</html>

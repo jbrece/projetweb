@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+	<title>ECE MarketPlace_compte</title>
+	<link href="stylecompte.css" rel="stylesheet" type="text/css" /> 
+	<meta charset="utf-8" />
+</head>
+<body>
+	<div id="header">
+		<p>Bienvenue sur votre compte de Vendeur<mark><a href="deconnexion.html">Déconnexion</a></mark></p>
+	</div>
+	<div id="navigation">
+		<h4><u>Informations du compte</u></h4>
+	</div>
+	<div id="wrapper">
+		<form action="traitement.php" method="post">
+			<table>
+				<tr>
+					<td>Email:</td>
+					<td><output type="text" name="email"></output></td>
+				</tr>
+				<tr>
+					<td>Mot de passe:</td>
+					<td><input type="password" name="mdp"/></td>
+					<td><input type="submit" name="boutton" value="Modifier"/></td>
+				</tr>
+				<tr>
+					<td>Nom:</td>
+					<td><output type="text" name="nom"></output></td>
+				</tr>
+				<tr>
+					<td>Prénom:</td>
+					<td><output type="text" name="prenom"></output></td>
+				</tr>
+				<tr>
+					<td>Pseudo:</td>
+					<td><output type="text" name="pseudo"></output></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div>
+		<div id="navigation">
+			<h4><u>Ajouter un article</u></h4>
+		</div>
+		<br>
+		<div>
+			<form action="traitement2.php" method="post">
+				<table align="center">
+					<tr>
+						<td>Numéro d'identification:</td>
+						<td><input type="text" name="num_id"/></td>
+					</tr>
+					<tr>
+						<td>Nom:</td>
+						<td><input type="text" name="nom"/></td>
+					</tr>
+					<tr>
+						<td>Qualités:</td>
+						<td><input type="text" name="qualite"/></td>
+					</tr>
+					<tr>
+						<td>Défauts:</td>
+						<td><input type="text" name="defaut"/></td>
+					</tr>
+					<tr>
+						<td>Prix initial:</td>
+						<td><input type="number" name="prix"/></td>
+					</tr>
+					</tr>
+						<td>Image:</td>
+						<td><input type="img" name="image"/></td>
+						<td colspan="2"><input type="submit" name="boutton1" value="Ajouter"/></td>
+					<tr>
+						<td>Vidéo:</td>
+						<td><input type="video" name="video"/></td>
+						<td colspan="2"><input type="submit" name="boutton2" value="Ajouter"/></td>
+					</tr>
+					<tr>
+						<td>Catégorie:</td>
+						<td><br><input type="radio" name="categorie" value="vip">Accéssoire VIP<br>
+							<input type="radio" name="categorie" value="scolaire">Matériel scolaire<br>
+							<input type="radio" name="categorie" value="meuble">Meuble ou Objet d'art</td>
+					</tr>
+					<tr>
+						<td>Type de vente:</td>
+						<td><br><input type="radio" name="type" value="immediat">Achat immédiat<br>
+							<input type="radio" name="type" value="offre">Meilleure offre<br>
+							<input type="radio" name="type" value="transaction">Transaction Vendeur-Client</td>
+					</tr>
+				</table>
+				<br>
+			</form>
+		</div>
+	<div id="footer">
+			<p>Copyright &copy; 2021, ECE MarketPlace</p>
+	</div>
+</body>
+</html>
