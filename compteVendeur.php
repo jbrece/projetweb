@@ -20,24 +20,25 @@
 <!DOCTYPE html>
 <head>
 	<title>ECE MarketPlace_compte</title>
-	<link href="stylecompte.css" rel="stylesheet" type="text/css" /> 
+	<link href="style.css" rel="stylesheet" type="text/css" /> 
 	<meta charset="utf-8" />
 </head>
 <body>
 	<div id="header">
-		<p>Bienvenue sur votre compte de Vendeur<mark><a href="deconnexion.html">Déconnexion</a></mark></p>
+		<p>Bienvenue sur votre compte de Vendeur<mark><a href="pageweb.php">Déconnexion</a></mark></p>
 	</div>
 	<div id="navigation1">
 		<table>
 			<tr>
-				<td><img id="center" src="ecemarket.png" alt="logo principal" width= "150" height="100"/></td>
-				<td align="center"><a class="onglet" href="pageweb.php"><strong>Accueil</strong></a></td>
-				<td align="center"><a class="onglet" href="parcourirvendeur.php"><strong>Tout parcourir</strong></a></td>
-				<td align="center"><a class="onglet" href="notification.php"><strong>Notifications</strong></a></td>
-				<td align="center"><a class="onglet" href="paniervendeur.php"><img src="panierimg.jpg" alt="panierclient" width=40 height="40"/><strong>Panier</a></strong></td>
+				<td><img id="center" src="images/fond/ecemarket.png" alt="logo principal" width= "150" height="100"/></td>
+				<td align="center"><a class="onglet" href="pagevendeur.php"><strong>Accueil</strong></a></td>
+				<td align="center"><a class="onglet" href="parcourirVendeur.php"><strong>Tout parcourir</strong></a></td>
+				<td align="center"><a class="onglet" href="notifVendeur.php"><strong>Notifications</strong></a></td>
 				<td align="center"><a class="onglet" href="compteVendeur.php"><strong>Mon compte</a></strong></td>
 			</tr>
 		</table>
+	</div>
+	<div id="ID">
 	</div>
 	<div id="navigation">
 		<h4><u>Informations du compte</u></h4>
@@ -87,14 +88,15 @@
 		<div id="navigation">
 			<h4><u>Ajouter un article</u></h4>
 		</div>
-		<br>
-		<div>
+		<div id="home">
 			<form enctype="multipart/form-data" action="itemVendeur.php" method="post">
+				<p><mark><?= $mes3?></mark></p>
 				<p><mark><?= $mes2?></mark></p>
 				<table align="center">
 					<tr>
 						<td>ID de l'item:</td>
 						<td><input type="text" name="ID"/></td>
+						<td><?= $mes?></td>
 					</tr>
 					<tr>
 						<td>Nom:</td>
@@ -138,7 +140,10 @@
 			</form>
 		</div>
 	<div id="footer">
-			<p>Copyright &copy; 2021, ECE MarketPlace</p>
+		<h6>Copyright &copy; 2021, ECE MarketPlace</h6>
+		<h6>Contacts: </h6>
+		<h6>Email: <u>admin@ece.fr</u></h6>
+		<h6><img src="images/fond/tel.jpg" height="15" width="auto"/><u>+33 (0) 1 64 57 22 11</u></h6>
 	</div>
 </body>
 </html>

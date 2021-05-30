@@ -15,23 +15,21 @@
   $email_admin = "admin@ece.fr";
   $email_vendeur = " ";
 
-  $test = false;
-
   //identification de BDD
   $database = "projet";
   //connexion a la BDD
-  $db_handle = mysqli_connect('localhost', 'root', '');
+  $db_handle = mysqli_connect('localhost', 'root', 'root');
   $db_found = mysqli_select_db($db_handle, $database);
 
-  if (isset($_POST["bouttonparcourir"])) {
+  if (isset($_POST["boutton"])) {
     $valid = 0;
     if($categorie == 'scolaire' && $type_achat == 'immediat'){
-      $sql = "SELECT * FROM item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
+      $sql = "SELECT * FROM Item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
       $result1 = mysqli_query($db_handle, $sql);
       echo '<!DOCTYPE html>
                 <head>
                   <title>ECE MarketPlace</title>
-                  <link href="stylecompte.css" rel="stylesheet" type="text/css" /> 
+                  <link href="style.css" rel="stylesheet" type="text/css" /> 
                   <meta charset="utf-8" />
                 </head>
                 <body>
@@ -79,7 +77,7 @@
             $email_admin=$data['Email_admin'];
             $email_vendeur=$data['Email_vendeur'];
             if ($valid == 1) {
-                $sql = "INSERT INTO panier(`Email_client`, `ID_item`, `ID_echange`, `ID_enchere`) VALUES ('client1', '$id', '1', '1')";
+                $sql = "INSERT INTO Panier(Email_client, ID_item, ID_echange, ID_enchere) VALUES ('client1@ece.fr', '$id', '1', '1')";
                 $res = mysqli_query($db_handle, $sql);
             }
             $valid = 0;
@@ -97,7 +95,7 @@
     }
 
     if($categorie == 'scolaire' && $type_achat == 'offre'){
-      $sql = "SELECT * FROM item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
+      $sql = "SELECT * FROM Item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
       $result1 = mysqli_query($db_handle, $sql);
       echo '<!DOCTYPE html>
                 <head>
@@ -149,7 +147,7 @@
             $email_admin=$data['Email_admin'];
             $email_vendeur=$data['Email_vendeur'];
             if ($valid == 1) {
-                $sql = "INSERT INTO panier(`Email_client`, `ID_item`, `ID_echange`, `ID_enchere`) VALUES ('client1', '$id', '1', '1')";
+                $sql = "INSERT INTO Panier(Email_client, ID_item, ID_echange, ID_enchere) VALUES ('client1@ece.fr', '$id', '1', '1')";
                 $res = mysqli_query($db_handle, $sql);
             }
             $valid = 0;
@@ -167,7 +165,7 @@
     } 
 
     if($categorie == 'scolaire' && $type_achat == 'transaction'){
-      $sql = "SELECT * FROM item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
+      $sql = "SELECT * FROM Item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
       $result1 = mysqli_query($db_handle, $sql);
       echo '<!DOCTYPE html>
                 <head>
@@ -219,7 +217,7 @@
             $email_admin=$data['Email_admin'];
             $email_vendeur=$data['Email_vendeur'];
             if ($valid == 1) {
-                $sql = "INSERT INTO panier(`Email_client`, `ID_item`, `ID_echange`, `ID_enchere`) VALUES ('client1', '$id', '1', '1')";
+                $sql = "INSERT INTO Panier(Email_client, ID_item, ID_echange, ID_enchere) VALUES ('client1@ece.fr', '$id', '1', '1')";
                 $res = mysqli_query($db_handle, $sql);
             }
             $valid = 0;
@@ -236,7 +234,7 @@
     } 
 
     if($categorie == 'vip' && $type_achat == 'immediat'){
-      $sql = "SELECT * FROM item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
+      $sql = "SELECT * FROM Item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
       $result1 = mysqli_query($db_handle, $sql);
       echo '<!DOCTYPE html>
                 <head>
@@ -288,7 +286,7 @@
             $email_admin=$data['Email_admin'];
             $email_vendeur=$data['Email_vendeur'];
             if ($valid == 1) {
-                $sql = "INSERT INTO panier(`Email_client`, `ID_item`, `ID_echange`, `ID_enchere`) VALUES ('client1', '$id', '1', '1')";
+                $sql = "INSERT INTO Panier(Email_client, ID_item, ID_echange, ID_enchere) VALUES ('client1@ece.fr', '$id', '1', '1')";
                 $res = mysqli_query($db_handle, $sql);
             }
             $valid = 0;
@@ -305,7 +303,7 @@
     } 
 
     if($categorie == 'vip' && $type_achat == 'offre'){
-      $sql = "SELECT * FROM item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
+      $sql = "SELECT * FROM Item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
       $result1 = mysqli_query($db_handle, $sql);
       echo '<!DOCTYPE html>
                 <head>
@@ -357,7 +355,7 @@
             $email_admin=$data['Email_admin'];
             $email_vendeur=$data['Email_vendeur'];
             if ($valid == 1) {
-                $sql = "INSERT INTO panier(`Email_client`, `ID_item`, `ID_echange`, `ID_enchere`) VALUES ('client1', '$id', '1', '1')";
+                $sql = "INSERT INTO Panier(Email_client, ID_item, ID_echange, ID_enchere) VALUES ('client1@ece.fr', '$id', '1', '1')";
                 $res = mysqli_query($db_handle, $sql);
             }
             $valid = 0;
@@ -374,7 +372,7 @@
     } 
 
     if($categorie == 'vip' && $type_achat == 'transaction'){
-      $sql = "SELECT * FROM item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
+      $sql = "SELECT * FROM Item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
       $result1 = mysqli_query($db_handle, $sql);
       echo '<!DOCTYPE html>
                 <head>
@@ -426,7 +424,7 @@
             $email_admin=$data['Email_admin'];
             $email_vendeur=$data['Email_vendeur'];
             if ($valid == 1) {
-                $sql = "INSERT INTO panier(`Email_client`, `ID_item`, `ID_echange`, `ID_enchere`) VALUES ('client1', '$id', '1', '1')";
+                $sql = "INSERT INTO Panier(Email_client, ID_item, ID_echange, ID_enchere) VALUES ('client1@ece.fr', '$id', '1', '1')";
                 $res = mysqli_query($db_handle, $sql);
             }
             $valid = 0;
@@ -443,7 +441,7 @@
     } 
 
     if($categorie == 'meuble' && $type_achat == 'immediat'){
-      $sql = "SELECT * FROM item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
+      $sql = "SELECT * FROM Item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
       $result1 = mysqli_query($db_handle, $sql);
       echo '<!DOCTYPE html>
                 <head>
@@ -495,7 +493,7 @@
             $email_admin=$data['Email_admin'];
             $email_vendeur=$data['Email_vendeur'];
             if ($valid == 1) {
-                $sql = "INSERT INTO panier(`Email_client`, `ID_item`, `ID_echange`, `ID_enchere`) VALUES ('client1', '$id', '1', '1')";
+                $sql = "INSERT INTO Panier(Email_client, ID_item, ID_echange, ID_enchere) VALUES ('client1@ece.fr', '$id', '1', '1')";
                 $res = mysqli_query($db_handle, $sql);
             }
             $valid = 0;
@@ -512,7 +510,7 @@
     } 
 
     if($categorie == 'meuble' && $type_achat == 'offre'){
-      $sql = "SELECT * FROM item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
+      $sql = "SELECT * FROM Item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
       $result1 = mysqli_query($db_handle, $sql);
       echo '<!DOCTYPE html>
                 <head>
@@ -564,7 +562,7 @@
             $email_admin=$data['Email_admin'];
             $email_vendeur=$data['Email_vendeur'];
             if ($valid == 1) {
-                $sql = "INSERT INTO panier(`Email_client`, `ID_item`, `ID_echange`, `ID_enchere`) VALUES ('client1', '$id', '1', '1')";
+                $sql = "INSERT INTO Panier(Email_client, ID_item, ID_echange, ID_enchere) VALUES ('client1@ece.fr', '$id', '1', '1')";
                 $res = mysqli_query($db_handle, $sql);
             }
             $valid = 0;
@@ -581,7 +579,7 @@
     } 
 
     if($categorie == 'meuble' && $type_achat == 'transaction'){
-      $sql = "SELECT * FROM item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
+      $sql = "SELECT * FROM Item WHERE Categorie LIKE '%$categorie%' AND Type_achat LIKE '%$type_achat%'";
       $result1 = mysqli_query($db_handle, $sql);
       echo '<!DOCTYPE html>
                 <head>
@@ -633,7 +631,7 @@
             $email_admin=$data['Email_admin'];
             $email_vendeur=$data['Email_vendeur'];
             if ($valid == 1) {
-                $sql = "INSERT INTO panier(`Email_client`, `ID_item`, `ID_echange`, `ID_enchere`) VALUES ('client1', '$id', '1', '1')";
+                $sql = "INSERT INTO Panier(Email_client, ID_item, ID_echange, ID_enchere) VALUES ('client1@ece.fr', '$id', '1', '1')";
                 $res = mysqli_query($db_handle, $sql);
             }
             $valid = 0;
@@ -643,7 +641,10 @@
       echo "</table>";
       echo '</div>
           <div id="footer">
-            <h6>Copyright &copy; 2021, ECE MarketPlace</h6>
+              <h6>Copyright &copy; 2021, ECE MarketPlace</h6>
+              <h6>Contacts: </h6>
+              <h6>Email: <u>admin@ece.fr</u></h6>
+              <h6><img src="images/fond/tel.jpg" height="15" width="auto"/><u>+33 (0) 1 64 57 22 11</u></h6>
           </div>
         </body>
         </html>';

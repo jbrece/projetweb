@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<title>ECE MarketPlace_Connexion</title>
-	<link href="stylecompte.css" rel="stylesheet" type="text/css" /> 
+	<link href="style.css" rel="stylesheet" type="text/css" /> 
 	<meta charset="utf-8" />
 </head>
 <body>
@@ -12,7 +12,6 @@
 				<td align="center"><a class="onglet" href="pageadmin.php"><strong>Accueil</strong></a></td>
 				<td align="center"><a class="onglet" href="parcourirAdmin.php"><strong>Tout parcourir</strong></a></td>
 				<td align="center"><a class="onglet" href="notification.php"><strong>Notifications</strong></a></td>
-				<td align="center"><a class="onglet" href="panier.php"><img src="images/fond/panierimg.jpg" alt="panier" width=40 height="40"/><strong>Panier</a></strong></td>
 				<td align="center"><a class="onglet" href="compteAdmin.php"><strong>Mon compte</a></strong></td>
 			</tr>
 		</table>
@@ -25,7 +24,7 @@
 		<div>
 			<form enctype="multipart/form-data" action="ajoutVendeur.php" method="post">
 				<p><mark><?= $compte?></mark></p>
-				<p><mark><?= $mes2?></mark>
+				<p><mark><?= $mes2?></mark></p>
 				<table align="center">
 					<tr>
 						<td>Email:</td>
@@ -34,6 +33,11 @@
 					<tr>
 						<td>Mot de passe:</td>
 						<td><input type="password" name="code"/></td>
+					</tr>
+					<tr>
+						<td>Confirmer:</td>
+						<td><input type="text" name="confirm"/></td>
+						<td><?= $mes4?></td>
 					</tr>
 					<tr>
 						<td>Nom:</td>
@@ -64,7 +68,10 @@
 		<br>
 		<div id="footer">
 			<h6>Copyright &copy; 2021, ECE MarketPlace</h6>
-		</div>
+			<h6>Contacts: </h6>
+			<h6>Email: <u>admin@ece.fr</u></h6>
+			<h6><img src="images/fond/tel.jpg" height="15" width="auto"/><u>+33 (0) 1 64 57 22 11</u></h6>
+	</div>
 	</div>
 </body>
 </html>
