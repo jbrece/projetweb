@@ -25,6 +25,14 @@ background-color: white;
         color : black;
 }
 
+.wrapper3 {
+  background-color: white;
+  clear:both;
+  text-align:center;
+  padding:10px;
+  color: white;
+}
+
 #navigation1 {
   background-color: #677179;
   clear:both;
@@ -40,12 +48,28 @@ background-color: white;
   padding:10px;
   color : white;
 }
-
 #navigation2 {
   background-color: grey;
   clear:both;
   padding:10px;
   color : white;
+}
+
+#home {
+  height: 1000px;
+  background-image: url("images/fond/fondVendeur.gif");
+  background-size: cover;
+  background-position: center;
+  color: black;
+
+}
+
+#ID {
+  position: absolute;
+  top: 58px;
+  right: 8px;
+  padding:10px;
+
 }
 
 #marge10 {
@@ -55,10 +79,26 @@ background-color: white;
   margin:20px;
 }
 
+
+img {
+  object-fit: cover;
+}
+
 mark {
   float: right;
 }
 
+.tab {text-align: center;
+      color: white;
+      background-color: black;
+      padding: 20px;
+      width: 650px;
+      margin: 0 auto 20px auto;
+      border-radius: 5px;
+      width: 680px;
+      margin: auto;
+      background-color: #9999EE;
+}
 td {
   width: 200px;
 }
@@ -77,22 +117,6 @@ td {
 
 
 }
-
-.onglet2 {
-  background-color: #F8F8FF;
-  border:none;
-  color:black;
-  padding: 10px;
-  text-align:center;
-  text-decoration:none;
-  display:inline-block;
-  font-size:16px;
-  margin:auto;
-  border-radius: 1rem;
-
-
-}
-
 .bouton {
   background-color: #677179;
   border:none;
@@ -119,7 +143,6 @@ td {
 }
 #footer{
         background-color: black;
-        clear:both;
         text-align:center;
         padding:10px;
         color : white;
@@ -127,13 +150,4 @@ td {
 
 #center {
   margin: 0 auto;
-}
-
-
-#rcorners2 {
-  border-radius: 15px;
-  border: 2px solid #73AD21;
-  padding: 10px; 
-  width: 120px;
-  height: 20px;  
 }

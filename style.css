@@ -1,29 +1,176 @@
-#content{
-    width: 50%;
-    margin: 20px auto;
-    border: 1px solid #cbcbcb;
+body { 
+  background-color: #01796F;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
-form{
-    width: 50%;
-    margin: 20px auto;
+#header { 
+  height: 50px;
 }
-form div{
-    margin-top: 5px;
+
+#wrapper { width: 680px;
+  min-width: 680px;
+  margin: 0 auto; 
+  background-color: white; 
+  color: black;
+ padding-left: 10px;
+ border: 2px solid black;
+
 }
-#img_div{
-    width: 80%;
-    padding: 5px;
-    margin: 15px auto;
-    border: 1px solid #cbcbcb;
+
+#navigation1 {
+  background-color: #677179;
+  clear:both;
+  text-align:center;
+  padding:10px;
+  color: white;
+  background-size: cover;
 }
-#img_div:after{
-    content: "";
-    display: block;
-    clear: both;
+
+#navigation {
+  background-color: black;
+  clear:both;
+  text-align:center;
+  padding:10px;
+  color : white;
 }
-img{
-    float: left;
-    margin: 5px;
-    width: 300px;
-    height: 140px;
+#navigation2 {
+  background-color: grey;
+  clear:both;
+  padding:10px;
+  color : white;
+}
+
+#bord {
+  background-color: white;
+  clear:both;
+  text-align:center;
+  padding:10px;
+}
+
+#home {
+  height: 1000px;
+  background-image: url(images/fond/fondVendeur.gif);
+  background-size: cover;
+  background-position: center;
+  color: black;
+
+}
+
+#ID {
+  position: absolute;
+  top: 66px;
+  right: 8px;
+  padding:10px;
+  background-image: url(images/id/vendeurID.gif);
+  background-size: cover;
+  height: 110px;
+  width: 200px;
+
+}
+
+#marge10 {
+  margin:10px;
+}
+#marge20 {
+  margin:20px;
+}
+
+
+img {
+  object-fit: cover;
+}
+
+mark {
+  float: right;
+}
+
+.tab {
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  width: 650px;
+  margin: 0 auto 20px auto;
+  border-radius: 5px;
+  width: 680px;
+  margin: auto;
+  background-color: #9999EE;
+}
+td {
+  width: 200px;
+}
+
+.onglet {
+  background-color: #01796F;
+  border:none;
+  color:white;
+  padding: 15px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  font-size:16px;
+  margin:auto;
+  border-radius: 2rem;
+
+
+}
+.bouton1 {
+  background-color: #01796F;
+  border:none;
+  color:white;
+  padding: 15px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  font-size:16px;
+  margin:auto;
+  border-radius: 1rem;
+}
+
+.bouton2 {
+  background-color: #D84D4D;
+  border:none;
+  color:white;
+  padding: 15px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  font-size:16px;
+  margin:auto;
+  border-radius: 1rem;
+}
+
+#accueil {
+  background-image: linear-gradient(to bottom, #0007, #0007), url(images/fond/vente.jpg);
+  height: auto;
+  width: auto;
+  background-size: cover;
+}
+
+#jour {
+  background-image: url(images/fond/selectiondujour.gif);
+  height: 150px;
+  width: 200;
+  background-size: contain;
+  background-position: center;
+}
+
+
+#fash {
+  background-image: url(images/fond/venteFlash.gif);
+  height: 150px;
+  width: 200;
+  background-size: contain;
+  background-position: center;
+}
+
+#footer{
+        background-color: black;
+        text-align:center;
+        padding:10px;
+        color : white;
+}
+
+#center {
+  margin: 0 auto;
 }

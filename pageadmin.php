@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <head>
 	<title>ECE MarketPlace</title>
-	<link href="stylecompte.css" rel="stylesheet" type="text/css" /> 
+	<link href="style.css" rel="stylesheet" type="text/css" /> 
 	<meta charset="utf-8" />
 </head>
 <body>
 	<div id="header">
-		<p><?php echo $compte; ?><mark>Bienvenue sur ECE MarketPlace <?php echo $prenom; ?> <?= $nom ?>.</mark></p>
+		<p><?= $compte ?><mark>Bienvenue sur ECE MarketPlace <?= $prenom ?> <?= $nom ?>.</mark></p>
 	</div>
 	<div id="navigation1">
 		<table>
 			<tr>
-				<td><img id="center" src="ecemarket.png" alt="logo principal" width= "150" height="100" /></td>
+				<td><img id="center" src="images/fond/ecemarket.png" alt="logo principal" width= "150" height="100"/></td>
 				<td align="center"><a class="onglet" href="pageadmin.php"><strong>Accueil</strong></a></td>
 				<td align="center"><a class="onglet" href="parcourirAdmin.php"><strong>Tout parcourir</strong></a></td>
-				<td align="center"><a class="onglet" href="notificationadmin.php"><strong>Notifications</strong></a></td>
+				<td align="center"><a class="onglet" href="notifAdmin.php"><strong>Notifications</strong></a></td>
 				<td align="center"><a class="onglet" href="compteAdmin.php"><strong>Mon compte</a></strong></td>
 			</tr>
 		</table>
 	</div>
-	<div id="section">
+	<div id="navigation">
+		<h4><u>Accueil</u></h4>
+	</div>
+	<div id="flash">
+	</div>
+	<div id="accueil">
+		<div id="jour">
+		</div>
+		<div id="flash">
+		</div>
+		<table align="center">	
+				<tr>
+					<td colspan="2" align="center"><br><h3 class="bouton1">Nouvel Article</h3><br></td>
+					<td colspan="2" align="center"><br><h3 class="bouton2">Coup de coeur</h3><br></td>
+				</tr>
+				<tr>
+					<td><img src="images/meubleArt/snk.png" alt="dessin" height="300" width="auto" border="4px" /></td>
+					<td><video src="images/meubleArt/snk.mp4" height="300" width="auto" controls></video></td>
+					<td>Prix : 18,00€ <br><br>
+						<input type="submit" name="button1" value="Modifier"/></td>
+					<td><img src="images/vip/switchMonster.jpg" alt="nitendo switch" height="300" width="auto"/></td>
+					<td>Prix : 429,00€ <br><br>
+						<input type="submit" name="button1" value="Modifier"/>
+					</td>
+				</tr>
+		</table>
+		<br><br>
+		<div id="navigation">
+		</div>
+		<div id="bord">
+			<p align="center"><br><img src="images/fond/venteFlash.gif" alt="vente flash" height="auto" width="600px"/></p>
+		</div>
+		<table align="center">
+			<tr>
+				<td align="center"><br><h3 class="bouton2">Promotion 15 %</h3><br></td>
+			</tr>
+			<tr>
+				<td><img src="images/vip/ps5.jpg" alt="ps5" height="300" width="auto"/></td>
+				<td>Prix : 594,15€ <br><br>
+							<input type="submit" name="button1" value="Modifier"/>
+				</td>	
+			</tr>
+		</table>
 	</div>
 	<div id="footer">
-		<p>Copyright &copy; 2021, ECE MarketPlace</p>
+			<h6>Copyright &copy; 2021, ECE MarketPlace</h6>
+			<h6>Contacts: </h6>
+			<h6>Email: <u>admin@ece.fr</u></h6>
+			<h6><img src="images/fond/tel.jpg" height="15" width="auto"/><u>+33 (0) 1 64 57 22 11</u></h6>
 	</div>
 </body>
 </html>

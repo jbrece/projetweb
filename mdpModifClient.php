@@ -1,11 +1,10 @@
 <?php
 $code= isset($_POST["mdp"])? $_POST["mdp"] : "";
 $modif="";
-//identifier votre BDD
+//identification de BDD
 $database = "projet";
-//connectez-vous dans votre BDD
-//Rappel: votre serveur = localhost et votre login = root et votre password = <rien>
-$db_handle = mysqli_connect('localhost', 'root', '');
+//connexion a la BDD
+$db_handle = mysqli_connect('localhost', 'root', 'root');
 $db_found = mysqli_select_db($db_handle, $database);
 
 if (isset($_POST["boutton"])) {

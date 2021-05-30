@@ -5,7 +5,7 @@
 	$database = "projet";
 	//connectez-vous dans votre BDD
 	//Rappel: votre serveur = localhost et votre login = root et votre password = <rien>
-	$db_handle = mysqli_connect('localhost', 'root', '');
+	$db_handle = mysqli_connect('localhost', 'root', 'root');
 	$db_found = mysqli_select_db($db_handle, $database);
 	$sql = "SELECT * FROM administrateur WHERE Email_admin LIKE '%admin@ece.fr%'";
 	$result = mysqli_query($db_handle, $sql);
@@ -16,20 +16,20 @@
 <!DOCTYPE html>
 <head>
 	<title>ECE MarketPlace_compte</title>
-	<link href="stylecompte.css" rel="stylesheet" type="text/css" /> 
+	<link href="style.css" rel="stylesheet" type="text/css" /> 
 	<meta charset="utf-8" />
 </head>
 <body>
 	<div id="header">
-		<p>Bienvenue sur votre compte Administrateur <mark><a href="deconnexion.html">Déconnexion</a></mark></p>
+		<p>Bienvenue sur votre compte Administrateur <mark><a href="pageweb.php">Déconnexion</a></mark></p>
 	</div>
 	<div id="navigation1">
 		<table>
 			<tr>
-				<td><img id="center" src="ecemarket.png" alt="logo principal" width= "150" height="100"/></td>
+				<td><img id="center" src="images/fond/ecemarket.png" alt="logo principal" width= "150" height="100"/></td>
 				<td align="center"><a class="onglet" href="pageadmin.php"><strong>Accueil</strong></a></td>
 				<td align="center"><a class="onglet" href="parcourirAdmin.php"><strong>Tout parcourir</strong></a></td>
-				<td align="center"><a class="onglet" href="notificationadmin.php"><strong>Notifications</strong></a></td>
+				<td align="center"><a class="onglet" href="notifAdmin.php"><strong>Notifications</strong></a></td>
 				<td align="center"><a class="onglet" href="compteAdmin.php"><strong>Mon compte</a></strong></td>
 			</tr>
 		</table>
@@ -57,7 +57,7 @@
 					</td>
 					<td><input type="password" name="mdp"/></td>
 					<td><input type="submit" name="boutton" value="Modifier"/></td>
-					<td><h6><?php //echo $modif; ?></h6></td>
+					<td><h6><?= $modif?></h6></td>
 				</tr>
 			</table>
 		</form>
@@ -69,11 +69,13 @@
 		<br>
 		<div>
 			<form enctype="multipart/form-data" action="itemAdmin.php" method="post">
-				<p><mark><?php // echo $mes2; ?></mark></p>
+				<p><mark><?= $mes3?></mark></p>
+				<p><mark><?= $mes2?></mark></p>
 				<table align="center">
 					<tr>
 						<td>ID de l'item:</td>
 						<td><input type="text" name="ID"/></td>
+						<td><?= $mes?></td>
 					</tr>
 					<tr>
 						<td>Nom:</td>
@@ -90,7 +92,7 @@
 					</tr>
 						<td>Image:</td>
 						<td><input type="file" name="fic"/></td>
-						<td><?php //echo $mes1; ?></td>
+						<td><?= $mes1?></td>
 					<tr>
 						<td>Vidéo:</td>
 						<td><input type="file" name="video"/></td>
@@ -123,18 +125,20 @@
 		<table align="center">
 			<tr>
 				<td>
-					<h4><a class="bouton" href="invite.php">Ajouter Vendeur</a></h4>
+					<h4><a class="bouton1" href="logVendeur.php">Ajouter Vendeur</a></h4>
 				</td>
 				<td>
-					<h4><a class="bouton" href="supvendeur.php">Supprimer Vendeur</a></h4>
+					<h4><a class="bouton1" href="supprVendeur.php">Supprimer Vendeur</a></h4>
 				</td>
 			</tr>
 		</table>	
 		<br>
 	</div>
-
 	<div id="footer">
-			<p>Copyright &copy; 2021, ECE MarketPlace</p>
+			<h6>Copyright &copy; 2021, ECE MarketPlace</h6>
+			<h6>Contacts: </h6>
+			<h6>Email: <u>admin@ece.fr</u></h6>
+			<h6><img src="images/fond/tel.jpg" height="15" width="auto"/><u>+33 (0) 1 64 57 22 11</u></h6>
 	</div>
 </body>
 </html>

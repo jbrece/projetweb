@@ -9,16 +9,17 @@ $prenom ="";
 $telephone="";
 $adresse="";
 $compte ="";
+$mes ="";
 //identification de votre BDD
 $database = "projet";
 //connexion a la BDD
-$db_handle = mysqli_connect('localhost', 'root', '');
+$db_handle = mysqli_connect('localhost', 'root', 'root');
 $db_found = mysqli_select_db($db_handle, $database);
 
 //Partie 1:Connexion administrateur 
 //*****************************
 if (isset($_POST["button1"])) {
-  if ($db_found) {
+  if ($email != "" && $code != "") {
     $sql = "SELECT * FROM administrateur";
     if ($email != "") {
     //on cherche si l'admin a deja un compte avec les paramètres email et code
@@ -41,12 +42,15 @@ if (isset($_POST["button1"])) {
         $connexion ="Email invalide ou code erroné.";
         include("pageweb.php");
       } 
-    } 
+  } else {
+      $mes ="Veuillez entrez votre email et votre mot de passe.";
+      include("pageweb.php");
+    }  
 }
 //Partie 2:Connexion vendeur 
 //*****************************
 elseif (isset($_POST["button2"])) {
-  if ($db_found) {
+ if ($email != "" && $code != ""){
     $sql = "SELECT * FROM vendeur";
     if ($email != "") {
     //on cherche si le vendeur a deja un compte avec les paramètres email et code
@@ -69,12 +73,15 @@ elseif (isset($_POST["button2"])) {
         $connexion ="Email invalide ou code erroné.";
         include("pageweb.php");
       } 
-    } 
+  } else {
+      $mes ="Veuillez entrez votre email et votre mot de passe.";
+      include("pageweb.php");
+    }   
 }
 //Partie 3:Connexion client 
 //*****************************
 else {
-  if ($db_found) {
+  if ($email != "" && $code != ""){
     $sql = "SELECT * FROM client";
     if ($email != "") {
     //on cherche si le client a deja un compte avec les paramètres email et code
@@ -101,8 +108,10 @@ else {
         $connexion ="Email invalide ou code erroné.";
         include("pageweb.php");
       } 
+  } else {
+      $mes ="Veuillez entrez votre email et votre mot de passe.";
+      include("pageweb.php");
     } 
-
 }
 //fermer la connexion
 mysqli_close($db_handle);

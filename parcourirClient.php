@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<title>ECE MarketPlace_compte</title>
-	<link href="stylecompte.css" rel="stylesheet" type="text/css" /> 
+	<link href="style.css" rel="stylesheet" type="text/css" /> 
 	<meta charset="utf-8" />
 </head>
 <body>
@@ -14,13 +14,13 @@
 				<td><img id="center" src="images/fond/ecemarket.png" alt="logo principal" width= "150" height="100" /></td>
 				<td align="center"><a class="onglet" href="pageclient.php"><strong>Accueil</strong></a></td>
 				<td align="center"><a class="onglet" href="parcourirClient.php"><strong>Tout parcourir</strong></a></td>
-				<td align="center"><a class="onglet" href="notification.php"><strong>Notifications</strong></a></td>
+				<td align="center"><a class="onglet" href="notifClient.php"><strong>Notifications</strong></a></td>
 				<td align="center"><a class="onglet" href="panierclient.php"><img src="images/fond/panierimg.jpg" alt="panier" width=40 height="40"/><strong>Panier</a></strong></td>
 				<td align="center"><a class="onglet" href="compteClient.php"><strong>Mon compte</a></strong></td>
 			</tr>
 		</table>
 	</div>
-	<div id="wrapper2">
+	<div id="accueil">
 		<form enctype="multipart/form-data" action="parcourir.php" method="post">
 			<table align="center">
 				<tr>
@@ -54,7 +54,10 @@
 		</form>
 	</div>
 	<div id="footer">
-			<p>Copyright &copy; 2021, ECE MarketPlace</p>
+			<h6>Copyright &copy; 2021, ECE MarketPlace</h6>
+			<h6>Contacts: </h6>
+			<h6>Email: <u>admin@ece.fr</u></h6>
+			<h6><img src="images/fond/tel.jpg" height="15" width="auto"/><u>+33 (0) 1 64 57 22 11</u></h6>
 	</div>
 </body>
 </html>
